@@ -2,13 +2,24 @@ const udev = require("udev");
 const monitor = udev.monitor();
 const exec = require('child_process').exec;
 console.clear();
+if (!process.env.SUDO_UID) {
+  console.log("This is how to use it:\nsudo node app.js");
+  process.exit();
+}
 
 function wipe(sdb, id) {
   console.log(`wipe ${sdb}`);
   // const CMD = `dd command`;
-  const CMD = `dd if=/dev/urandom of=${sdb} conv=fsync 2>\`date "+%Y%m%d%H%M%S"\``;
+  // example: sudo dd if=/dev/urandom of=/dev/sda conv=fsync | pv -n
+  const CMD = `sudo dd if=/dev/urandom of=${sdb} conv=fsync | pv -n`;
+  console.log(CMD);
+  //2 >\`date "+%Y%m%d%H%M%S"\``;
   let dd = exec(CMD);
   // DD output
+  dd.stderr.on('data', function(data) {
+    // TODO: LEDS
+    console.log(`--> ${data}`);
+  });
   dd.stdout.on('data', function(data) {
     // TODO: LEDS
     console.log(`--> ${data}`);

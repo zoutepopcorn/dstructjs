@@ -1,0 +1,23 @@
+{
+  "name": "dstructjs",
+  "version": "0.0.1",
+  "description": "C.D.E. Clean Disk Earaser",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cytopyge/dstructjs.git"
+  },
+  "author": "Yoda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cytopyge/dstructjs/issues"
+  },
+  "homepage": "https://github.com/cytopyge/dstructjs#readme",
+  "dependencies": {
+    "rpi-ws281x-native": "^0.8.2",
+    "udev": "^0.4.0"
+  }
+}

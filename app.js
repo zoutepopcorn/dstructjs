@@ -6,7 +6,7 @@ console.clear();
 function wipe(sdb, id) {
   console.log(`wipe ${sdb}`);
   // const CMD = `dd command`;
-  const CMD = `dd if=/dev/urandom of=${sdb} conv=fsync 2>`date "+%Y%m%d%H%M%S"``;
+  const CMD = `dd if=/dev/urandom of=${sdb} conv=fsync 2>\`date "+%Y%m%d%H%M%S"\``;
   let dd = exec(CMD);
   // DD output
   dd.stdout.on('data', function(data) {

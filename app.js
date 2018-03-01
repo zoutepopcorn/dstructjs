@@ -32,11 +32,11 @@ monitor.on('add', function(device) {
   console.log("add monitor");
   // New device
   if (device.DEVNAME.indexOf("/dev/sd") == 0 && device.DEVTYPE.indexOf("disk") == 0) {
-    // console.log(device);
+    console.log(device);
     wipe(device.DEVNAME, device.ID_SERIAL_SHORT)
   }
 });
 
 monitor.on('remove', function(device) {
-  console.log('removed ' + device);
+  // console.log('removed ' + device);
 });

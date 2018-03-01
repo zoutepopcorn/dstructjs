@@ -10,9 +10,10 @@ if (!process.env.SUDO_UID) {
 function wipe(sdb, id) {
   console.log(`wipe ${sdb}`);
   // const CMD = `dd command`;
-  // example: sudo dd if=/dev/urandom of=/dev/sda conv=fsync | pv -n
-  const CMD = `sudo dd if=/dev/urandom of=${sdb} conv=fsync | pv -n`;
+  // example:
   // sudo dd if=/dev/urandom bs=4M count=`sudo blockdev --getsize64 /dev/sda` iflag=count_bytes | pv -n -s `sudo blockdev --getsize64 /dev/sda` | sudo dd of=/dev/sda bs=4M conv=notrunc,noerror 2>&1
+  const CMD = `sudo dd if=/dev/urandom bs=4M count=\`sudo blockdev --getsize64 /dev/sda\` iflag=count_bytes | pv -n -s \`sudo blockdev --getsize64 /dev/sda\` | sudo dd of=/dev/sda bs=4M conv=notrunc,noerror 2>&1`;
+  
   console.log(CMD);
   //2 >\`date "+%Y%m%d%H%M%S"\``;
   let dd = exec(CMD);

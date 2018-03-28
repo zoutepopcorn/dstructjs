@@ -24,3 +24,8 @@ full output
                                                 ^
 ```
 
+### device.sys
+
+```
+/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2/1-1.2:1.0/host11/target11:0:0/11:0:0:0/block/sda
+```

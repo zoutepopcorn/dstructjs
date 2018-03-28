@@ -35,7 +35,7 @@ full output
 
 ```javascript
 const out = `/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2/1-1.2:1.0/host5/target5:0:0/5:0:0:0/block/sda`
-const spl = out.split('/')[7];
+const spl = out.split('/')[8];
 const port = spl.charAt(spl.length -1);
 console.log(port);
 ```

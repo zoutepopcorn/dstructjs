@@ -17,7 +17,7 @@ node -v;
 
 ## udev
 ```
-sudo apt-get install libudev-dev
+sudo apt-get install libudev-dev pv
 npm install udev
 ```
 

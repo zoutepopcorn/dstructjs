@@ -18,10 +18,13 @@ node -v;
 ## udev
 ```
 sudo apt-get install libudev-dev pv
-npm install udev
+sudo npm install udev -g
 ```
-
-TODO: install udev in package.json?
+#### errors
+```
+sudo apt-get update
+sudo npm install -g --unsafe-perm
+```
 
 ## app
 ```

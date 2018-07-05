@@ -23,7 +23,7 @@ sudo npm install udev -g
 #### errors
 ```
 sudo apt-get update
-sudo npm install -g --unsafe-perm
+sudo npm install udev -g --unsafe-perm
 ```
 
 ## app

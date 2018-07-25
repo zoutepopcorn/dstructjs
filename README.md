@@ -6,6 +6,9 @@ The script is written to work on a Linux system, especially Raspberry pi.
 
 # Installing 
 
+https://community.roonlabs.com/t/howto-powermate-extension-on-a-raspberry-pi/23819
+
+
 ## node js
 
 ```
